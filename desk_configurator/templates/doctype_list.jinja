@@ -1,0 +1,4 @@
+frappe.listview_settings["{{doctype_config}}"] = {
+{% if hide_name_column %}hide_name_column: true, // hide the last column which shows the `name`{% endif %}
+{% if hide_name_filter %}hide_name_filter: true, // hide the last column which shows the `name`{% endif %}
+};

@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "beta": 1,
+ "creation": "2024-05-17 11:04:36.663292",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doctype_config",
+  "doctype_path",
+  "list_view_tab",
+  "list_view_js_path",
+  "section_break_txfu",
+  "hide_name_column",
+  "hide_name_filter",
+  "section_break_krsa",
+  "code_hpie",
+  "calendar_view_tab",
+  "gantt_view_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctype_config",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Select Doctype",
+   "options": "DocType",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "list_view_tab",
+   "fieldtype": "Tab Break",
+   "label": "List View"
+  },
+  {
+   "fieldname": "calendar_view_tab",
+   "fieldtype": "Tab Break",
+   "label": "Calendar View"
+  },
+  {
+   "fieldname": "gantt_view_tab",
+   "fieldtype": "Tab Break",
+   "label": "Gantt View"
+  },
+  {
+   "fieldname": "doctype_path",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "DocType Path"
+  },
+  {
+   "fieldname": "list_view_js_path",
+   "fieldtype": "Data",
+   "is_virtual": 1
+  },
+  {
+   "default": "0",
+   "description": "hide the last column which shows the `name`",
+   "fieldname": "hide_name_column",
+   "fieldtype": "Check",
+   "label": "Hide Name Column"
+  },
+  {
+   "default": "0",
+   "description": "hide the default filter field for the name column",
+   "fieldname": "hide_name_filter",
+   "fieldtype": "Check",
+   "label": "Hide Name Filter"
+  },
+  {
+   "fieldname": "section_break_txfu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_krsa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "code_hpie",
+   "fieldtype": "Code",
+   "is_virtual": 1,
+   "options": "js"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-18 01:40:09.293288",
+ "modified_by": "Administrator",
+ "module": "Desk Configurator",
+ "name": "dcDocType",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "doctype_config"
+}
