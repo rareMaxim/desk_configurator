@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 # import frappe
+import json
 import frappe
 from frappe.model.document import Document
 
@@ -13,16 +14,21 @@ class dcDocType(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from desk_configurator.desk_configurator.doctype.dcdoctype_addfields.dcdoctype_addfields import dcDocTypeAddFields
+		from desk_configurator.desk_configurator.doctype.dcdoctype_filters.dcdoctype_filters import dcDocTypeFilters
 		from frappe.types import DF
 
+		add_fields: DF.Table[dcDocTypeAddFields]
 		code_hpie: DF.Code | None
 		doctype_config: DF.Link
 		doctype_path: DF.Data | None
+		filters: DF.Table[dcDocTypeFilters]
+		has_indicator_for_draft: DF.Check
 		hide_name_column: DF.Check
 		hide_name_filter: DF.Check
 		list_view_js_path: DF.Data | None
 	# end: auto-generated types
-
+	
 	@property
 	def doctype_path(self):
 		return get_doctype_folder_path(self.doctype_config)
@@ -35,6 +41,9 @@ class dcDocType(Document):
 			'doctype_config': self.doctype_config,
 			'hide_name_column': self.hide_name_column,
 			'hide_name_filter': self.hide_name_filter,
+			'has_indicator_for_draft': self.has_indicator_for_draft,
+			'add_fields': self.add_fields,
+			'filters': self.filters,
 		}
 		return render_my_template(context, False)
 

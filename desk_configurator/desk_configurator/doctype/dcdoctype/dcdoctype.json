@@ -12,7 +12,15 @@
   "list_view_js_path",
   "section_break_txfu",
   "hide_name_column",
+  "column_break_unns",
   "hide_name_filter",
+  "column_break_nzze",
+  "has_indicator_for_draft",
+  "section_break_sxda",
+  "column_break_hbet",
+  "add_fields",
+  "column_break_mycs",
+  "filters",
   "section_break_krsa",
   "code_hpie",
   "calendar_view_tab",
@@ -81,11 +89,53 @@
    "fieldtype": "Code",
    "is_virtual": 1,
    "options": "js"
+  },
+  {
+   "default": "0",
+   "description": "set this to true to apply indicator function on draft documents too",
+   "fieldname": "has_indicator_for_draft",
+   "fieldtype": "Check",
+   "label": "Has Indicator For Draft"
+  },
+  {
+   "fieldname": "section_break_sxda",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hbet",
+   "fieldtype": "Column Break",
+   "is_virtual": 1
+  },
+  {
+   "description": "add fields to fetch",
+   "fieldname": "add_fields",
+   "fieldtype": "Table",
+   "label": "Add Fields",
+   "options": "dcDocType AddFields"
+  },
+  {
+   "description": "set default filters",
+   "fieldname": "filters",
+   "fieldtype": "Table",
+   "label": "Filters",
+   "options": "dcDocType Filters"
+  },
+  {
+   "fieldname": "column_break_unns",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nzze",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mycs",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-18 01:40:09.293288",
+ "modified": "2024-05-19 19:07:13.325600",
  "modified_by": "Administrator",
  "module": "Desk Configurator",
  "name": "dcDocType",
