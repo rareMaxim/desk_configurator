@@ -23,11 +23,13 @@ class dcDocType(Document):
 		doctype_config: DF.Link
 		doctype_path: DF.Data | None
 		filters: DF.Table[dcDocTypeFilters]
+		get_indicator: DF.Code | None
 		has_indicator_for_draft: DF.Check
 		hide_name_column: DF.Check
 		hide_name_filter: DF.Check
 		list_view_js_path: DF.Data | None
 	# end: auto-generated types
+
 	
 	@property
 	def doctype_path(self):
@@ -44,6 +46,7 @@ class dcDocType(Document):
 			'has_indicator_for_draft': self.has_indicator_for_draft,
 			'add_fields': self.add_fields,
 			'filters': self.filters,
+			'get_indicator': self.get_indicator,
 		}
 		return render_my_template(context, False)
 

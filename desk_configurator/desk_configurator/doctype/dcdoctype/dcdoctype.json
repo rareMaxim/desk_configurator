@@ -21,6 +21,9 @@
   "add_fields",
   "column_break_mycs",
   "filters",
+  "section_break_kmry",
+  "get_indicator",
+  "column_break_ghcw",
   "section_break_krsa",
   "code_hpie",
   "calendar_view_tab",
@@ -78,11 +81,13 @@
   },
   {
    "fieldname": "section_break_txfu",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Column ID and Draft indicator"
   },
   {
    "fieldname": "section_break_krsa",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Preview"
   },
   {
    "fieldname": "code_hpie",
@@ -99,7 +104,8 @@
   },
   {
    "fieldname": "section_break_sxda",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Fetch and Filters"
   },
   {
    "fieldname": "column_break_hbet",
@@ -131,11 +137,25 @@
   {
    "fieldname": "column_break_mycs",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kmry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Customize indicator color",
+   "fieldname": "get_indicator",
+   "fieldtype": "Code",
+   "label": "get_indicator"
+  },
+  {
+   "fieldname": "column_break_ghcw",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-19 19:07:13.325600",
+ "modified": "2024-05-20 22:37:18.024947",
  "modified_by": "Administrator",
  "module": "Desk Configurator",
  "name": "dcDocType",

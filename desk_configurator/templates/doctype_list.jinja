@@ -5,7 +5,7 @@ has_indicator_for_draft: {% if has_indicator_for_draft %}true{% else %}false{% e
 {%- if add_fields %}
 add_fields: [  
         {%- for item in add_fields -%}
-{{ item.field }}{%- if not loop.last -%}, {% endif -%}
+'{{ item.field }}'{%- if not loop.last -%}, {% endif -%}
         {%- endfor -%}
 ], // add fields to fetch
 {%- endif %}
@@ -16,4 +16,10 @@ filters: [{%- for item in filters %}
         {%- endfor %}
 ], // add fields to fetch
 {%- endif %}
+
+{% if get_indicator %}
+get_indicator(doc) {
+{{get_indicator}}
+},
+{% endif %}
 }
